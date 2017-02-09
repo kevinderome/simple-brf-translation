@@ -24,6 +24,12 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 void translateBrf(std::string &str);
 int    convertBrf(const std::string name);
 
+typedef enum
+{
+	fr_mode,
+	en_mode
+} langMode;
+
 std::map<char, int>     code = {
 	{ ' ', ' ' },
 	{ '-','-' },

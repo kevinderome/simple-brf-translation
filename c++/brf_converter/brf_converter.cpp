@@ -19,8 +19,25 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 
 using namespace std;
 
+static langMode    currLang = en_mode;
+
+
+
+void    checkMode(const std::string &line)
+{
+	for (int i = 0; i < line.size(); ++i)
+		if (line[i] == '¨' || (line[i] >= 'a' && line[i] <= 'z'))
+		{
+			currLang = fr_mode;
+			break;
+		}
+
+}
+
 void translateBrf(string &str)
 {
+	if (currLang == fr_mode)
+		return;
 	int size = str.size();
 
 	for (int i = 0; i < size; i++)
@@ -39,7 +56,10 @@ int    convertBrf(std::string name)
 	while (getline(File, tmp))
 	{
 		if (!tmp.empty())
+		{
+			checkMode(tmp);
 			translateBrf(tmp);
+		}
 		sortie << tmp << endl;
 	}
 	sortie.close();
