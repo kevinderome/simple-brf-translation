@@ -1,0 +1,8 @@
+﻿  stdafx.cpp
+  brf_converter.cpp
+brf_converter.cpp(28): warning C4018: '<' : incompatibilité signed/unsigned
+  Génération de code en cours
+  All 353 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Fin de la génération du code
+  brf_converter.vcxproj -> C:\Users\derome_k\Documents\simple-brf-translation\c++\Release\brf_converter.exe
+  brf_converter.vcxproj -> C:\Users\derome_k\Documents\simple-brf-translation\c++\Release\brf_converter.pdb (Full PDB)
